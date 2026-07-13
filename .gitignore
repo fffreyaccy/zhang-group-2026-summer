@@ -1,0 +1,5 @@
+.netlify/
+.tools/
+.DS_Store
+*.zip
+index.single.html
