@@ -125,7 +125,7 @@ document.getElementById("reset-procure").addEventListener("click", () => {
 
 function setupReveal() {
   const nodes = document.querySelectorAll(
-    ".section-head, .day, .activity-list li, .guide-grid article, .food-list li, .panel, .tips, .villa-note"
+    ".section-head, .day, .villa-hero, .villa-specs, .villa-gallery figure, .activity-list li, .guide-grid article, .food-list li, .panel, .tips"
   );
   nodes.forEach((el) => el.classList.add("reveal"));
 
