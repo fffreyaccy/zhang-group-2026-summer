@@ -21,12 +21,24 @@
       <a href="#activities">活动</a>
       <a href="#guide">游玩指引</a>
       <a href="#food">美食</a>
-      <a href="#wishlist">想买的</a>
+      <a href="#wishlist">采购清单</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero">
+      <div class="hero-atmosphere" aria-hidden="true">
+        <span class="cloud cloud-a"></span>
+        <span class="cloud cloud-b"></span>
+        <span class="cloud cloud-c"></span>
+        <svg class="gull gull-a" viewBox="0 0 48 16" fill="none">
+          <path d="M2 10C8 4 14 4 18 8C22 4 28 3 34 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <svg class="gull gull-b" viewBox="0 0 48 16" fill="none">
+          <path d="M4 11C10 5 15 5 20 9C24 5 30 4 36 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+      </div>
+
       <div class="hero-copy">
         <p class="brand">Zhang Group</p>
         <h1>2026 暑期团建</h1>
@@ -38,17 +50,29 @@
       </div>
 
       <div class="hero-horizon" aria-hidden="true">
-        <svg class="turtle" viewBox="0 0 120 64" fill="none">
-          <ellipse cx="62" cy="34" rx="28" ry="16" fill="currentColor" opacity=".55"/>
-          <path d="M34 34c-8 2-14 8-16 12M90 34c8 2 14 8 16 12M48 20c-2-8 2-14 8-16M76 20c2-8-2-14-8-16" stroke="currentColor" stroke-width="3" stroke-linecap="round" opacity=".45"/>
-          <circle cx="78" cy="30" r="2.2" fill="#0E5F6A"/>
-        </svg>
         <div class="sun"></div>
+        <svg class="island-scape" viewBox="0 0 1200 220" preserveAspectRatio="xMidYMax meet">
+          <path class="island-far" d="M620 168c40-34 92-52 150-48 38 3 72 18 108 20 28 2 54-6 78-2v42H620z"/>
+          <path class="island-mid" d="M0 188c70-8 120-42 180-40 55 2 88 28 140 26 48-2 70-24 118-22 62 3 95 36 160 34 48-1 78-22 120-18v50H0z"/>
+          <g class="palm palm-left">
+            <path d="M210 188v-72" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M210 118c-28-8-48-4-62 10M210 118c-18-22-14-42 2-58M210 118c18-20 38-24 58-12M210 118c28-6 46 2 56 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </g>
+          <g class="palm palm-right">
+            <path d="M980 186v-64" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <path d="M980 124c-24-10-42-8-54 4M980 124c-14-22-8-40 8-54M980 124c16-18 36-22 54-10M980 124c26-4 42 6 50 18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </g>
+          <ellipse class="turtle" cx="340" cy="176" rx="22" ry="11" opacity=".5"/>
+          <path class="turtle" d="M320 176c-8 2-14 7-16 11M360 176c8 2 14 7 16 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".45"/>
+        </svg>
         <svg class="waves" viewBox="0 0 1440 180" preserveAspectRatio="none">
           <path class="wave wave-1" d="M0,90 C240,140 480,40 720,90 C960,140 1200,40 1440,90 L1440,180 L0,180 Z"/>
           <path class="wave wave-2" d="M0,110 C240,160 480,60 720,110 C960,160 1200,60 1440,110 L1440,180 L0,180 Z"/>
           <path class="wave wave-3" d="M0,130 C240,170 480,90 720,130 C960,170 1200,90 1440,130 L1440,180 L0,180 Z"/>
         </svg>
+        <div class="foam foam-a"></div>
+        <div class="foam foam-b"></div>
+        <div class="foam foam-c"></div>
       </div>
     </section>
 
@@ -322,7 +346,7 @@
           <div>
             <h3>别墅烧烤夜</h3>
             <p>8.17 晚上主场在院子。海鲜可提前市场采购一部分带回烤，再配肉类、蔬菜、玉米、饮料。</p>
-            <p class="meta">详见下方「团建采购清单」</p>
+            <p class="meta">详见下方「采购清单」</p>
           </div>
         </li>
       </ol>
@@ -330,36 +354,25 @@
 
     <section class="section" id="wishlist">
       <div class="section-head">
-        <p class="eyebrow">Wishlist</p>
-        <h2>你想买的</h2>
-        <p class="sub">团建采购大家勾选；个人心愿可现场登记，数据保存在本机浏览器。</p>
+        <p class="eyebrow">Shopping</p>
+        <h2>采购清单</h2>
+        <p class="sub">大家一起填写腾讯文档，实时同步可见。</p>
       </div>
 
-      <div class="wish-panels">
-        <div class="panel">
-          <h3>团建采购清单</h3>
-          <p class="panel-sub">勾选后自动保存，方便分工购买。</p>
-          <ul class="check-list" id="procure-list"></ul>
-          <button type="button" class="btn ghost small" id="reset-procure">清空勾选</button>
-        </div>
-
-        <div class="panel interactive">
-          <h3>个人心愿清单</h3>
-          <p class="panel-sub">特产、纪念品、想代购的……写下来。</p>
-          <form id="wish-form" class="wish-form">
-            <label>
-              名字
-              <input name="name" type="text" placeholder="你的名字" required maxlength="20" />
-            </label>
-            <label>
-              想买的
-              <input name="item" type="text" placeholder="例如：真空鱼丸 / 海盐 / 明信片" required maxlength="80" />
-            </label>
-            <button type="submit" class="btn primary">添加</button>
-          </form>
-          <ul class="wish-items" id="wish-items"></ul>
-        </div>
+      <div class="sheet-embed">
+        <iframe
+          title="Zhang Group 2026暑期团建采购清单"
+          src="https://docs.qq.com/sheet/DUkFVQ1JMc3daUFZq?tab=BB08J2"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
       </div>
+      <p class="sheet-fallback">
+        若无法直接编辑，请
+        <a href="https://docs.qq.com/sheet/DUkFVQ1JMc3daUFZq?tab=BB08J2" target="_blank" rel="noopener">打开腾讯文档</a>
+        。
+      </p>
     </section>
   </main>
 
