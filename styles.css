@@ -665,6 +665,26 @@ a:hover {
   color: var(--sea-deep);
 }
 
+.food-with-pic {
+  display: grid;
+  gap: 0.85rem;
+}
+
+@media (min-width: 700px) {
+  .food-with-pic {
+    grid-template-columns: 140px 1fr;
+    align-items: start;
+  }
+}
+
+.food-with-pic img {
+  width: 100%;
+  max-width: 160px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
 .sheet-embed {
   width: 100%;
   min-height: 70vh;
