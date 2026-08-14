@@ -131,7 +131,7 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center 28%;
   transform: scale(1.04);
   animation: heroZoom 18s ease-in-out infinite alternate;
 }
@@ -289,13 +289,6 @@ a:hover {
 .timeline {
   display: grid;
   gap: 2.5rem;
-}
-
-@media (min-width: 800px) {
-  .timeline {
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-  }
 }
 
 .day header {
@@ -625,6 +618,76 @@ a:hover {
   margin: 0 0 0.75rem;
   font-family: var(--font-display);
   font-size: 1.1rem;
+}
+
+.ref-links {
+  list-style: none;
+  padding-left: 0;
+}
+
+.ref-links li + li {
+  margin-top: 0.45rem;
+}
+
+.ref-links a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.play-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 800px) {
+  .play-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.play-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 0.9rem;
+  background: rgba(255, 252, 247, 0.72);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.play-list .num {
+  font-family: var(--font-brand);
+  font-size: 1.15rem;
+  color: var(--sea-mid);
+  line-height: 1;
+}
+
+.play-list img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.play-list h3 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+}
+
+.play-list p {
+  margin: 0 0 0.35rem;
+  color: var(--ink-soft);
+}
+
+.play-list .meta {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--sea-deep);
 }
 
 .food-list {

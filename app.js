@@ -1,6 +1,6 @@
 function setupReveal() {
   const nodes = document.querySelectorAll(
-    ".section-head, .day, .moments-grid figure, .villa-hero, .villa-specs, .villa-gallery figure, .activity-tiles article, .guide-feature, .guide-grid article, .food-list li, .sheet-embed, .tips"
+    ".section-head, .day, .moments-grid figure, .villa-hero, .villa-specs, .villa-gallery figure, .play-list li, .guide-grid article, .sheet-embed, .tips"
   );
   nodes.forEach((el) => el.classList.add("reveal"));
 
